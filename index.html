@@ -25,11 +25,17 @@
   }
   /* stripe band at the top, like old garden club websites */
   .stripe{height:14px;background:repeating-linear-gradient(90deg,var(--moss) 0 24px,var(--bark) 24px 48px)}
-  header{text-align:center;padding:2.2rem 1.5rem 1.6rem;border-bottom:1px solid #d8d0bd;background:var(--cream)}
-  header h1{margin:0;font-size:2.1rem;letter-spacing:.04em;font-weight:normal;color:var(--moss-dark)}
-  header .sub{margin:.7rem 0 0;font-size:.9rem;color:var(--bark-dark)}
+  header{
+    text-align:center;
+    padding:5rem 1.5rem 4.5rem;
+    background:linear-gradient(180deg,var(--moss-dark),var(--moss));
+    color:var(--cream);
+    border-bottom:8px solid var(--bark-dark);
+  }
+  header h1{margin:0;font-size:3.2rem;letter-spacing:.05em;font-weight:normal;color:var(--cream)}
+  header .sub{margin:1.4rem 0 0;font-size:1rem;color:#dbe3d3}
   header .sub span{margin:0 .5rem}
-  header .sub span+span::before{content:'~';margin-right:1rem;color:#b9b094}
+  header .sub span+span::before{content:'~';margin-right:1rem;color:#9fb096}
   nav{background:var(--bark-dark);text-align:center;padding:.6rem}
   nav a{color:var(--cream);text-decoration:none;margin:0 .7rem;font-size:.9rem}
   nav a:hover{text-decoration:underline;color:var(--gold)}
@@ -39,9 +45,14 @@
   a{color:var(--bark)}
   ul{padding-left:1.2rem}
   li{margin:.35rem 0}
-  .pics{text-align:center}
-  .pics figure{display:inline-block;vertical-align:top;max-width:320px;margin:.6rem .4rem}
-  .pics img{max-width:100%;border:4px solid var(--bark);background:#fff;padding:4px;box-shadow:3px 3px 0 rgba(0,0,0,.15)}
+  .pics .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.2rem;
+    margin-top:1rem;
+  }
+  .pics figure{margin:0}
+  .pics img{width:100%;height:100%;display:block;border:4px solid var(--bark);background:#fff;padding:4px;box-shadow:3px 3px 0 rgba(0,0,0,.15)}
   .cap{font-size:.85rem;font-style:italic;color:var(--bark-dark);display:block;margin-top:.4rem}
   .note{font-size:.85rem;color:#7a7263}
   table{border-collapse:collapse;width:100%;margin:.8rem 0}
@@ -54,6 +65,11 @@
   footer .badges span{display:inline-block;border:1px solid #4c604a;padding:.2rem .6rem;margin:.2rem;color:#cdd8c7}
   /* bee divider */
   .bee-divider{text-align:center;color:var(--bark);letter-spacing:.6em;margin:.4rem 0}
+  @media(max-width:560px){
+    .pics .grid{grid-template-columns:1fr}
+    header{padding:3.5rem 1.2rem 3rem}
+    header h1{font-size:2.2rem}
+  }
 </style>
 </head>
 <body>
@@ -111,25 +127,27 @@
   <h2>~ pics of me (and my world) ~</h2>
   <p class="cap">very official portraits of the bee in question. photos via ikea.com, plus one from the forest.</p>
 
-  <figure>
-    <img src="https://www.ikea.com/fr/fr/images/products/skogsduva-peluche-bourdon-noir-jaune__1302018_pe937610_s5.jpg?f=s" alt="skogsduva plush bumblebee, corporate portrait on white">
-    <span class="cap">me, corporate portrait. white background, professional buzz</span>
-  </figure>
+  <div class="grid">
+    <figure>
+      <img src="https://www.ikea.com/fr/fr/images/products/skogsduva-peluche-bourdon-noir-jaune__1302018_pe937610_s5.jpg?f=s" alt="skogsduva plush bumblebee, corporate portrait on white">
+      <span class="cap">me, corporate portrait. white background, professional buzz</span>
+    </figure>
 
-  <figure>
-    <img src="https://www.ikea.com/fr/fr/images/products/skogsduva-peluche-bourdon-noir-jaune__1372169_ph200459_s5.jpg?f=s" alt="skogsduva plush bumblebee, alive background">
-    <span class="cap">me, on a livelier background. this is my natural habitat</span>
-  </figure>
+    <figure>
+      <img src="https://www.ikea.com/fr/fr/images/products/skogsduva-peluche-bourdon-noir-jaune__1372169_ph200459_s5.jpg?f=s" alt="skogsduva plush bumblebee, alive background">
+      <span class="cap">me, on a livelier background. this is my natural habitat</span>
+    </figure>
 
-  <figure>
-    <img src="https://www.ikea.com/fr/fr/images/products/skogsduva-peluche-bourdon-noir-jaune__1372101_ph200409_s5.jpg?f=undefined" alt="the whole skogsduva family and elements">
-    <span class="cap">the whole family. all the skogsduva elements in one place. we are many</span>
-  </figure>
+    <figure>
+      <img src="https://www.ikea.com/fr/fr/images/products/skogsduva-peluche-bourdon-noir-jaune__1372101_ph200409_s5.jpg?f=undefined" alt="the whole skogsduva family and elements">
+      <span class="cap">the whole family. all the skogsduva elements in one place. we are many</span>
+    </figure>
 
-  <figure>
-    <img src="https://planete-deco.fr/wp-content/uploads/2024/09/IK3-2.jpg" alt="a scenic forest plan">
-    <span class="cap">a scenic plan of where i live. green, brown, calm. mostly brown if i am napping</span>
-  </figure>
+    <figure>
+      <img src="https://planete-deco.fr/wp-content/uploads/2024/09/IK3-2.jpg" alt="a scenic forest plan">
+      <span class="cap">a scenic plan of where i live. green, brown, calm. mostly brown if i am napping</span>
+    </figure>
+  </div>
 </section>
 
 <div class="bee-divider">o o o o o</div>
